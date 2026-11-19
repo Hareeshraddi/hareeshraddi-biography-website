@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hareeshraddi Dani — My Story | Biography</title>
+<meta name="description" content="The biography of Hareeshraddi Dani — a Computer Science Engineering student at SKSVMACET. My story, my journey, my vision." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23120733'/><text x='50' y='66' font-size='44' font-family='serif' font-style='italic' text-anchor='middle' fill='%23f0abfc'>H</text></svg>" />
+</head>
+<body>
+
+<!-- ============ CINEMATIC LOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-grain"></div>
+  <div class="loader-inner">
+    <p class="loader-kicker">A STORY IN CHAPTERS</p>
+    <p class="loader-title"><em>The Making of</em><strong>Hareeshraddi Dani</strong></p>
+    <div class="loader-reel"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="loader-bar"><span id="loaderFill"></span></div>
+  </div>
+</div>
+
+<!-- Reading progress -->
+<div class="read-progress" id="readProgress" aria-hidden="true"><span></span></div>
+
+<!-- Cursor aura -->
+<div class="aura" id="aura" aria-hidden="true"></div>
+
+<!-- Ambient aurora -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-band a1"></div>
+  <div class="aurora-band a2"></div>
+  <div class="aurora-band a3"></div>
+  <div class="stars" id="stars"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-wrap" id="siteNav">
+  <nav class="nav glass" aria-label="Primary navigation">
+    <a href="#prologue" class="brand" aria-label="Back to prologue">
+      <span class="brand-seal">H</span>
+      <span class="brand-text"><strong>Hareeshraddi Dani</strong><em>my story · vol. I</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#prologue" class="nav-link active" data-section="prologue">Prologue</a></li>
+      <li><a href="#story" class="nav-link" data-section="story">My Story</a></li>
+      <li><a href="#why-cs" class="nav-link" data-section="why-cs">Why CS</a></li>
+      <li><a href="#journey" class="nav-link" data-section="journey">Journey</a></li>
+      <li><a href="#passions" class="nav-link" data-section="passions">Passions</a></li>
+      <li><a href="#vision" class="nav-link" data-section="vision">Vision</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span class="chapter-pill mono" id="chapterPill">CH. 00 — PROLOGUE</span>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu glass-strong" id="mobileMenu" aria-hidden="true">
+  <a href="#prologue">Prologue</a>
+  <a href="#story">My Story</a>
+  <a href="#why-cs">Why Computer Science</a>
+  <a href="#journey">My Journey</a>
+  <a href="#learning">Learning</a>
+  <a href="#passions">Passions</a>
+  <a href="#growth">Growth</a>
+  <a href="#vision">Vision</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+<!-- ============ PROLOGUE / HERO ============ -->
+<section class="prologue" id="prologue" aria-label="Prologue">
+  <canvas id="dust" class="dust" aria-hidden="true"></canvas>
+  <div class="prologue-word" aria-hidden="true">BECOMING</div>
+
+  <div class="prologue-inner">
+    <p class="kicker reveal-hero" data-delay="0"><span class="k-line"></span> CHAPTER 00 · PROLOGUE <span class="k-line"></span></p>
+
+    <!-- Morphing portrait -->
+    <div class="portrait-stage reveal-hero" data-delay="2" id="portraitStage">
+      <div class="halo halo-1" aria-hidden="true"></div>
+      <div class="halo halo-2" aria-hidden="true"></div>
+      <div class="ring r-outer" aria-hidden="true"><i class="sat"></i><i class="sat s2"></i></div>
+      <div class="ring r-mid" aria-hidden="true"><i class="sat s3"></i></div>
+      <div class="ring r-ticks" aria-hidden="true"></div>
+      <div class="orb o1" aria-hidden="true"></div>
+      <div class="orb o2" aria-hidden="true"></div>
+      <div class="portrait-morph" id="portraitMorph">
+        <img src="assets/profile.webp" alt="Portrait of Hareeshraddi Dani" id="profileImg" fetchpriority="high" />
+        <div class="portrait-placeholder" id="photoPlaceholder" aria-hidden="true">H</div>
+        <div class="portrait-shine" aria-hidden="true"></div>
+      </div>
+      <div class="orbit-label ol-1 glass" aria-hidden="true">✦ curious mind</div>
+      <div class="orbit-label ol-2 glass" aria-hidden="true">◈ builder at heart</div>
+    </div>
+
+    <h1 class="story-name" id="storyName" aria-label="Hareeshraddi Dani">
+      <span class="name-line" data-text="Hareeshraddi"></span>
+      <span class="name-line italic" data-text="Dani"></span>
+    </h1>
+
+    <p class="story-subtitle reveal-hero" data-delay="5">Computer Science Engineer in the Making.</p>
+    <p class="story-tagline reveal-hero" data-delay="6"><em>“Turning Ideas Into Meaningful Digital Experiences.”</em></p>
+    <p class="story-lede reveal-hero" data-delay="7">I'm a 5th-semester Computer Science student at <strong>SKSVMACET</strong> — and this is the story of how curiosity turned into craft. Scroll slowly. This one is personal.</p>
+
+    <div class="prologue-cta reveal-hero" data-delay="8">
+      <a href="#story" class="btn btn-gold btn-lg magnetic">Begin My Story
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghostlight btn-lg magnetic">Say Hello</a>
+    </div>
+
+    <div class="prologue-foot reveal-hero" data-delay="9">
+      <div class="est mono">EST. 2005 · KARNATAKA, INDIA <span class="placeholder-inline">(editable)</span></div>
+      <a href="#story" class="scroll-cue" aria-label="Scroll to chapter one"><span></span></a>
+      <div class="est mono">CSE · SKSVMACET · SEM V</div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider quote -->
+<div class="film-strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<!-- ============ CH 01 MY STORY ============ -->
+<section class="chapter" id="story" aria-label="My story">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 01</span>
+      <h2 class="ch-title">Where My <em>Story</em> Begins</h2>
+      <p class="ch-sub">Every engineer has an origin story. Mine starts with simple curiosity.</p>
+    </div>
+    <div class="story-grid">
+      <article class="glass card narrative reveal">
+        <p class="dropcap">I have always been the kind of person who asks <strong>“how does this work?”</strong> — and then refuses to stop until I find out. Long before I wrote my first line of code, I was fascinated by how small ideas could turn into things people use every day.</p>
+        <p>Growing up, technology felt like magic to me — phones, websites, apps that seemed to know what you needed. But instead of just using them, I wanted to <strong>understand</strong> them. That curiosity slowly turned into a habit: observing, questioning, experimenting, and learning.</p>
+        <p>When I joined <strong>Computer Science Engineering at SKSVMACET</strong>, it felt like I had finally found the right room. Suddenly, the “magic” had names — logic, algorithms, networks, interfaces — and I could start learning the craft behind it.</p>
+        <div class="pull-quote">“I don't just want to use technology.<br/>I want to <span>build</span> it.”</div>
+        <p>Today, as a 5th-semester student, I describe myself simply: <strong>a curious, self-motivated builder</strong> who learns by doing — and who is just getting started.</p>
+      </article>
+      <aside class="story-side">
+        <div class="glass card fact-card reveal" data-delay="1">
+          <h3>Quick facts about me</h3>
+          <ul>
+            <li><b>Name</b><span>Hareeshraddi Dani</span></li>
+            <li><b>Studying</b><span>B.E. CSE · 5th Sem</span></li>
+            <li><b>College</b><span>SKSVMACET</span></li>
+            <li><b>Superpower</b><span>Learning by building</span></li>
+            <li><b>Fuel</b><span class="placeholder-text">[ Chai · Music · Late-night code ]</span></li>
+            <li><b>Motto</b><span>“Small steps, daily.”</span></li>
+          </ul>
+        </div>
+        <div class="glass card trait-card reveal" data-delay="2">
+          <h3>What people notice in me</h3>
+          <div class="trait-bars">
+            <div class="trait" data-w="92"><div><span>Curiosity</span><b>92%</b></div><div class="tbar"><i></i></div></div>
+            <div class="trait" data-w="86"><div><span>Self-motivation</span><b>86%</b></div><div class="tbar"><i></i></div></div>
+            <div class="trait" data-w="80"><div><span>Creativity</span><b>80%</b></div><div class="tbar"><i></i></div></div>
+            <div class="trait" data-w="88"><div><span>Persistence</span><b>88%</b></div><div class="tbar"><i></i></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 02 WHY CS ============ -->
+<section class="chapter chapter-alt" id="why-cs" aria-label="Why I chose computer science">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 02</span>
+      <h2 class="ch-title">Why I Chose <em>Computer Science</em></h2>
+      <p class="ch-sub">It wasn't a random choice. It was the only choice that made sense.</p>
+    </div>
+    <div class="why-grid">
+      <article class="glass card why-card reveal">
+        <span class="why-no">01</span>
+        <h3>Ideas become real here</h3>
+        <p>In computer science, an idea in the morning can become something people touch by evening. That speed — from thought to working software — still amazes me, and it's why I love building for the web.</p>
+      </article>
+      <article class="glass card why-card reveal" data-delay="1">
+        <span class="why-no">02</span>
+        <h3>Problems are puzzles</h3>
+        <p>I genuinely enjoy debugging. Every error message is a clue, every bug a small mystery. CS rewards the exact kind of patient, logical thinking I naturally enjoy.</p>
+      </article>
+      <article class="glass card why-card reveal" data-delay="2">
+        <span class="why-no">03</span>
+        <h3>Impact at scale</h3>
+        <p>A well-built tool can help thousands of people — students, patients, small businesses. I want to build software that is not just clever, but genuinely useful and trustworthy.</p>
+      </article>
+    </div>
+    <blockquote class="big-quote reveal">
+      “I chose computer science because it lets me be <span>logical and creative</span> at the same time — an engineer with an artist's curiosity.”
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ CH 03 JOURNEY TIMELINE ============ -->
+<section class="chapter" id="journey" aria-label="My engineering journey">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 03</span>
+      <h2 class="ch-title">My Engineering <em>Journey</em></h2>
+      <p class="ch-sub">Semester by semester — from first program to real projects.</p>
+    </div>
+    <div class="journey">
+      <div class="j-line" aria-hidden="true"><span id="journeyFill"></span></div>
+
+      <article class="j-item reveal">
+        <div class="j-badge">Sem 1–2</div>
+        <div class="glass card j-card">
+          <h3>The Foundations <span class="j-tag">Beginnings</span></h3>
+          <p>My first steps into programming — learning how computers think, writing my first programs, and discovering that <strong>Python</strong> feels like thinking out loud. Everything was new, and everything was exciting.</p>
+          <div class="j-chips"><span>Programming Basics</span><span>Python</span><span>Maths &amp; Logic</span></div>
+        </div>
+      </article>
+
+      <article class="j-item reveal">
+        <div class="j-badge">Sem 3–4</div>
+        <div class="glass card j-card">
+          <h3>Finding My Direction <span class="j-tag">Discovery</span></h3>
+          <p>Data structures taught me to think in systems. Web technologies — <strong>HTML and CSS</strong> — taught me to think in experiences. I realized I love the place where logic meets design, and I started building small pages and layouts of my own.</p>
+          <div class="j-chips"><span>Data Structures</span><span>HTML · CSS</span><span>DBMS</span><span>UI Basics</span></div>
+        </div>
+      </article>
+
+      <article class="j-item reveal">
+        <div class="j-badge live">Sem 5 · Now</div>
+        <div class="glass card j-card current">
+          <h3>Building With Purpose <span class="j-tag gold">● Present</span></h3>
+          <p>Now I learn by shipping. My <strong>Personal Health Monitor</strong>, <strong>API Sentinel</strong>, <strong>VerityGrid Campus</strong> and <strong>College ERP</strong> concepts each taught me something different — wellness UX, security thinking, digital trust, and systems design. I'm also diving deeper into <strong>cybersecurity and AI</strong>.</p>
+          <div class="j-chips"><span>4 Projects</span><span>Security</span><span>AI Curiosity</span><span>Real Builds</span></div>
+        </div>
+      </article>
+
+      <article class="j-item reveal">
+        <div class="j-badge ghost">Sem 6–8</div>
+        <div class="glass card j-card future">
+          <h3>The Road Ahead <span class="j-tag">Vision</span></h3>
+          <p>Next: stronger JavaScript, real internships, open-source contributions, and deeper security + AI skills. I want to graduate not just with a degree — but with a <strong>portfolio I'm proud of</strong> and the confidence to contribute from day one.</p>
+          <div class="j-chips"><span>Internships</span><span>Open Source</span><span>Advanced JS</span><span>AI + Security</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 04 LEARNING ============ -->
+<section class="chapter chapter-alt" id="learning" aria-label="Learning experiences">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 04</span>
+      <h2 class="ch-title">What Building <em>Taught Me</em></h2>
+      <p class="ch-sub">Lessons no textbook could have given me.</p>
+    </div>
+    <div class="learn-grid">
+      <article class="glass card learn-card reveal">
+        <div class="learn-ico">◈</div>
+        <h3>Start ugly, iterate fast</h3>
+        <p>My first layouts were rough. But each revision taught me spacing, hierarchy and patience. Done-then-refined beats perfect-but-never-started.</p>
+        <span class="learn-from">— from Personal Health Monitor</span>
+      </article>
+      <article class="glass card learn-card reveal" data-delay="1">
+        <div class="learn-ico">⬢</div>
+        <h3>Think like an attacker, build like a guardian</h3>
+        <p>Exploring API vulnerabilities changed how I see every login form and payment button. Security isn't a feature — it's a responsibility.</p>
+        <span class="learn-from">— from API Sentinel</span>
+      </article>
+      <article class="glass card learn-card reveal" data-delay="2">
+        <div class="learn-ico">✦</div>
+        <h3>Trust must be designed</h3>
+        <p>Privacy settings and verification flows taught me that users trust software when designers respect them. Clarity builds confidence.</p>
+        <span class="learn-from">— from VerityGrid Campus</span>
+      </article>
+      <article class="glass card learn-card reveal" data-delay="3">
+        <div class="learn-ico">◎</div>
+        <h3>Systems serve people</h3>
+        <p>A college ERP isn't about screens — it's about students, teachers and staff. Good software disappears and lets people do their work.</p>
+        <span class="learn-from">— from College ERP</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 05 PASSIONS ============ -->
+<section class="chapter" id="passions" aria-label="Technical interests and passions">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 05</span>
+      <h2 class="ch-title">Things I'm <em>Passionate</em> About</h2>
+      <p class="ch-sub">The interests that keep me learning late into the night.</p>
+    </div>
+    <div class="passion-grid">
+      <article class="passion glass reveal">
+        <div class="passion-art pa-web" aria-hidden="true"><div class="pa-shape"></div><div class="pa-dots"></div></div>
+        <h3>Web Craft</h3>
+        <p>Semantic HTML, expressive CSS, delightful motion. I love turning blank screens into experiences that feel alive and effortless.</p>
+        <div class="passion-meter"><span style="--w:84%"></span></div>
+      </article>
+      <article class="passion glass reveal" data-delay="1">
+        <div class="passion-art pa-sec" aria-hidden="true"><div class="pa-shield">⬢</div><div class="pa-scan"></div></div>
+        <h3>Cybersecurity</h3>
+        <p>How systems break — and how to protect them. APIs, payments, identity: the invisible battles that keep people's data safe fascinate me.</p>
+        <div class="passion-meter"><span style="--w:72%"></span></div>
+      </article>
+      <article class="passion glass reveal" data-delay="2">
+        <div class="passion-art pa-ai" aria-hidden="true"><div class="pa-brain">✦</div><div class="pa-waves"></div></div>
+        <h3>Artificial Intelligence</h3>
+        <p>Machines that learn, assist and create. I'm at the start of this journey — curious, humble, and excited about what's possible.</p>
+        <div class="passion-meter"><span style="--w:64%"></span></div>
+      </article>
+      <article class="passion glass reveal" data-delay="3">
+        <div class="passion-art pa-design" aria-hidden="true"><div class="pa-pen">◈</div><div class="pa-grid"></div></div>
+        <h3>Design &amp; Storytelling</h3>
+        <p>Typography, color, narrative. Great products tell stories — and I want everything I build to communicate clearly and beautifully.</p>
+        <div class="passion-meter"><span style="--w:78%"></span></div>
+      </article>
+    </div>
+    <div class="stack-strip glass reveal">
+      <span class="mono">MY CURRENT STACK</span>
+      <div class="stack-chips"><b>HTML</b><b>CSS</b><b>Python</b><i>JavaScript · learning</i><i>Security · exploring</i><i>AI · discovering</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 06 GROWTH / PROJECTS ============ -->
+<section class="chapter chapter-alt" id="growth" aria-label="Projects and personal growth">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 06</span>
+      <h2 class="ch-title">Projects That <em>Shaped Me</em></h2>
+      <p class="ch-sub">Not just what I built — but who I became while building it.</p>
+    </div>
+    <div class="growth-list">
+      <article class="glass card growth reveal tilt" data-tilt>
+        <div class="g-art g1" aria-hidden="true">♥</div>
+        <div><span class="g-kicker">WELLNESS · WEB APP</span><h3>Personal Health Monitor</h3>
+        <p>Tracking health activities, BMI and wellness info taught me empathy-driven design. Health data is personal — so clarity, calm colors and honest feedback matter more than flashy effects.</p>
+        <span class="g-lesson">Growth: I learned to design for real human routines.</span></div>
+      </article>
+      <article class="glass card growth reveal tilt" data-tilt data-delay="1">
+        <div class="g-art g2" aria-hidden="true">⬢</div>
+        <div><span class="g-kicker">SECURITY · RESEARCH BUILD</span><h3>API Sentinel — Payment Security Edition</h3>
+        <p>Studying API vulnerabilities and payment integrity showed me the hidden side of the web. Every endpoint is a promise — and promises need protection.</p>
+        <span class="g-lesson">Growth: I learned to think adversarially and build defensively.</span></div>
+      </article>
+      <article class="glass card growth reveal tilt" data-tilt data-delay="2">
+        <div class="g-art g3" aria-hidden="true">✓</div>
+        <div><span class="g-kicker">TRUST · PLATFORM CONCEPT</span><h3>VerityGrid Campus</h3>
+        <p>Imagining document authenticity, identity verification and permission systems for campuses taught me that trust is a feature you design — with transparency, privacy and control.</p>
+        <span class="g-lesson">Growth: I learned that ethics and UX are inseparable.</span></div>
+      </article>
+      <article class="glass card growth reveal tilt" data-tilt data-delay="3">
+        <div class="g-art g4" aria-hidden="true">▣</div>
+        <div><span class="g-kicker">SYSTEMS · ADMIN CONCEPT</span><h3>College ERP</h3>
+        <p>Exploring centralized academic management showed me how software connects people — students, faculty, administration — and how good structure reduces everyday friction.</p>
+        <span class="g-lesson">Growth: I learned to see software as an ecosystem.</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CH 07 VISION ============ -->
+<section class="chapter" id="vision" aria-label="Vision and future goals">
+  <div class="container">
+    <div class="ch-head reveal">
+      <span class="ch-no">Chapter 07</span>
+      <h2 class="ch-title">Where I'm <em>Headed</em></h2>
+      <p class="ch-sub">An honest look at the future I'm working toward.</p>
+    </div>
+    <div class="vision-grid">
+      <div class="glass card vision-main reveal">
+        <h3>My vision</h3>
+        <p class="vision-text">In the next few years, I see myself as a <strong>skilled software engineer</strong> who builds secure, intelligent, human-centered products. I want to work on teams where I can contribute real value while continuing to learn every single day.</p>
+        <p>Long term, I dream of working at the intersection of <strong>cybersecurity and AI</strong> — building systems people can trust in a world that increasingly depends on software. Whether that's safer payments, smarter tools, or platforms that protect privacy, I want my work to matter.</p>
+        <div class="goals">
+          <div class="goal"><b>◈</b><div><strong>Near term (now – graduation)</strong><span>Master JavaScript · ship portfolio projects · earn an internship · contribute to open source</span></div></div>
+          <div class="goal"><b>⬢</b><div><strong>Mid term (early career)</strong><span>Grow as a full contributor · deepen security + AI expertise · learn from great mentors</span></div></div>
+          <div class="goal"><b>✦</b><div><strong>Long term (the dream)</strong><span>Build trusted, intelligent products at scale · mentor juniors · keep creating</span></div></div>
+        </div>
+      </div>
+      <div class="vision-side">
+        <div class="glass card philo reveal" data-delay="1">
+          <span class="philo-mark">“</span>
+          <h3>My philosophy</h3>
+          <p class="philo-text">Learn a little every day. Build more than you consume. Stay curious when it's easy — and stay honest when it's hard. <strong>Small steps, taken daily, become extraordinary journeys.</strong></p>
+          <p class="philo-sig">— Hareeshraddi Dani</p>
+        </div>
+        <div class="glass card values reveal" data-delay="2">
+          <h3>Values I build by</h3>
+          <ul>
+            <li><b>Curiosity</b> — ask why, then ask again</li>
+            <li><b>Craft</b> — care about details others miss</li>
+            <li><b>Integrity</b> — build things worthy of trust</li>
+            <li><b>Growth</b> — be better than last month</li>
+            <li><b>Kindness</b> — help others rise with you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EPILOGUE / CONTACT ============ -->
+<section class="chapter chapter-alt epilogue" id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="ch-head reveal center">
+      <span class="ch-no">Epilogue</span>
+      <h2 class="ch-title">Let's Write the <em>Next Chapter</em> Together</h2>
+      <p class="ch-sub">Whether it's an internship, a project, or just a good conversation about tech — I'd love to hear from you.</p>
+    </div>
+    <div class="epi-grid">
+      <a class="glass card epi-card reveal" href="mailto:hareeshraddi2005@gmail.com">
+        <span class="epi-ico">✉</span><span class="epi-k">EMAIL ME</span>
+        <strong>hareeshraddi2005@gmail.com</strong><span class="epi-go">Write to me ↗</span>
+      </a>
+      <a class="glass card epi-card reveal" data-delay="1" href="tel:+919164066966">
+        <span class="epi-ico">☎</span><span class="epi-k">CALL ME</span>
+        <strong>+91 9164066966</strong><span class="epi-go">Say hello ↗</span>
+      </a>
+      <div class="glass card epi-card dim reveal" data-delay="2">
+        <span class="epi-ico">⬣</span><span class="epi-k">ELSEWHERE</span>
+        <strong class="placeholder-text">[ GitHub · LinkedIn — add your links ]</strong>
+        <span class="epi-go">Coming soon</span>
+      </div>
+    </div>
+    <form class="glass card epi-form reveal" id="helloForm">
+      <h3>Or leave a quick note</h3>
+      <div class="frow">
+        <label>Your name<input type="text" name="name" placeholder="Your name" required /></label>
+        <label>Your email<input type="email" name="email" placeholder="you@example.com" required /></label>
+      </div>
+      <label>Your message<textarea name="message" rows="3" placeholder="Hi Hareeshraddi, I read your story and…" required></textarea></label>
+      <button type="submit" class="btn btn-gold btn-lg magnetic">Send With Warmth ♥</button>
+    </form>
+    <p class="the-end reveal">— end of volume I · <em>to be continued…</em> —</p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="foot-brand"><span class="brand-seal sm">H</span><span>© 2026 Hareeshraddi Dani · A story told in HTML · CSS · Vanilla JS</span></div>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑ <em>prologue</em></button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
